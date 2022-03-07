@@ -1,0 +1,263 @@
+html,
+body {
+  position: relative;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main_frame {
+  position: relative;
+  min-height: 200px;
+  margin-top: 150px;
+  padding: 20px;
+}
+
+.card {
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.card > h3 {
+  color: white;
+}
+
+.card > h2 {
+  font-size: 5em;
+  color: white;
+}
+
+.card > a {
+  position: inherit;
+  bottom: 0px;
+}
+
+.main_frame > a {
+  color: white;
+  width: 20rem;
+}
+
+.main-frame a label {
+  font-size: 300pt;
+}
+
+.site-logo a > img {
+  height: 90px;
+  width: 80px;
+}
+
+.profile {
+  height: 50px;
+  width: 45px;
+}
+
+center > a {
+  position: relative;
+  width: 65%;
+  color: white;
+  padding: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pvr {
+  background: #004c99;
+}
+.pv {
+  background: #0066cc;
+}
+.po {
+  background: #0080ff;
+}
+.jo {
+  background: #0080ff;
+}
+.rr {
+  background: #0080ff;
+}
+.agma {
+  background: #0cd16e;
+}
+.mngrleave {
+  background: #0066cc;
+}
+.ogmleave {
+  background: #004c99;
+}
+
+a > .ins {
+  color: red;
+  font-size: 2rem;
+}
+
+.dtpanel {
+  position: relative;
+  margin: 0 auto;
+  min-height: 200px;
+  height: 470px;
+  padding-bottom: 10px;
+  overflow: auto;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.dtpanel::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.dtpanel::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.dtpanel::-webkit-scrollbar-thumb {
+  background-color: rgba(10, 10, 10, 0.4);
+  outline: 1px solid slategrey;
+}
+
+.dtpanel > span {
+  position: relative;
+  padding: 10px;
+  height: 50px;
+  width: 100%;
+  color: white;
+  background: #2765a3;
+}
+
+.dtpanel > span label {
+  color: black;
+  font-size: 25pt;
+}
+
+.hh td {
+  position: relative;
+  background: #a3aeba;
+  color: black;
+  font-weight: bold;
+}
+.hh2 td {
+  padding: 7px;
+}
+.hh3 td {
+  background: #fcfce3;
+  padding: 7px;
+  font-weight: bold;
+}
+.hh4 td {
+  padding: 0px;
+}
+.mm {
+  position: relative;
+  height: 10px;
+}
+
+.mm td > .ppose {
+  position: relative;
+  width: 380px;
+  height: 50%;
+  overflow-wrap: break-word;
+  overflow: auto;
+}
+
+.dtpanel > fieldset {
+  position: relative;
+  min-height: 80px;
+  margin-top: 30px;
+  width: 100%;
+  margin: 0 auto;
+  border: 0px solid black;
+  background: rgb(230, 230, 230);
+  padding: 10px;
+}
+
+fieldset > legend {
+  position: relative;
+  width: auto;
+  padding: 5px;
+  margin-left: 20px;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+fieldset > .h_det {
+  position: relative;
+  width: 100%;
+}
+
+.mpv {
+  position: relative;
+  width: 150px;
+}
+
+.stat {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: rgb(0, 100, 0);
+  color: white;
+  padding: 5px;
+}
+
+section > input {
+  position: relative;
+  width: 100%;
+}
+
+.d_body > thead tr td {
+  position: relative;
+  font-weight: bolder;
+  padding: 7px;
+}
+
+.d_body {
+  position: relative;
+  width: 98%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.foot {
+  position: relative;
+  min-height: 100px;
+  width: 98%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.foot .btn {
+  position: relative;
+  width: 100% !important;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    position: relative;
+    width: 100%;
+    height: 110px;
+  }
+
+  header h5 {
+    font-size: 40pt;
+  }
+
+  .lgot {
+    font-size: 20pt;
+  }
+
+  .dtpanel {
+    width: 100%;
+    height: auto;
+  }
+
+  .dd {
+    font-size: 15pt;
+  }
+
+  .bk {
+    position: relative;
+    font-size: 25pt;
+    width: 100%;
+  }
+}

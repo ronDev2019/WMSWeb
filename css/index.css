@@ -1,0 +1,61 @@
+.form{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 30px;
+	background:rgba(255,255,255,1);
+	width: 294px;
+}
+
+.form > button{
+	float: right;
+}
+.form > a{
+	position: relative;
+	top: 5px;
+	font-size: 9pt;
+}
+
+@media screen and (max-width: 1024px){
+
+	.form{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		padding: 30px;
+		background:rgba(255,255,255,1);
+		height: 80em;
+		width: 100%;
+	}
+
+	.form > p{
+		position: relative;
+		font-size: 80pt;
+		margin-bottom: 1em;
+	}
+
+	.form > input{
+		font-size: 50pt;
+		height: 120px;
+		text-align: center;
+		padding: 1em;
+		margin-bottom: 0.7em;
+		border:0px, 0px, 0px, 1px;
+	}
+
+	.form > button{
+		position: relative;
+		padding: 20px;
+		height: auto;
+		width: 100%;
+		font-size: 40pt;
+	}
+
+	.form > a{
+		position: absolute;
+		top:24em;
+		font-size: 30pt;
+	}
+}
