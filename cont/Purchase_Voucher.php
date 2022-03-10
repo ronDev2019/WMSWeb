@@ -11,24 +11,14 @@
 <head>
 	<title> Purchase Voucher Page </title>
 </head>
-<?= require_once 'header.php'; ?>
+<?php require_once 'header.php'; ?>
 	<div class="container-fluid">
 		<div class="row">
-			<section class="dtpanel">
+			<section class="main_frame">
 				<span class="well well-md">
 					<h4> PURCHASE VOUCHER APPROVAL </h4>
 				</span>
-				<table border="0" class="table table-hover table-bordered dd">
-					<tr class="hh">
-						<td> MPV </td>
-						<td> Request Type </td>
-						<td> Date </td>
-						<td> Requester </td>
-						<td> Purpose </td>
-						<td> Action </td>
-					</tr>
-<?php
-
+				<?php
 					require_once '../functions/db.php';
 
 					$sel_data = sqlsrv_query($conn, "SELECT * FROM [OnlineT].[vMPVInformation] WHERE Status = 'FLOAT' AND Recommending = 'APPROVED' AND Approval = 'PENDING' ORDER BY RequestDate DESC");
@@ -40,49 +30,41 @@
 
 							$date = $val->RequestDate;
 							$date = $date->format("j-M-Y");
-
-
-							?>
-
-								<tr class="mm">
-									<td> <?= $val->MPVNo ?> </td>
-									<td> <?= $val->RequestType ?> </td>
-									<td> <?= $date ?> </td>
-									<td> <?= $val->RequestedBy ?> </td>
-									<td> <p class="ppose"> <?= $val->Purpose ?> </p> </td>
-									<td>
-										<form action="Purchase_details.php" method="POST">
-											<input type="hidden" value="<?= $val->MPVNo ?>" name="key">
-											<input type="hidden" value="Purchase_Voucher.php" name="link">
-											<input type="submit" name="View_details" value="View Details" class="btn btn-md btn-primary">
-										</form>
-									</td>
-								</tr>
-
-							<?php
+					?>
+					<div class="form_info">
+						<label> MPV: <strong> <?= $val->MPVNo ?> </strong></label><br>
+						<label> Request Type: <strong> <?= $val->RequestType ?> </strong> </label><br>
+						<label> Date: <strong> <?= $date ?> </strong> </label><br>
+						<label> Requester: <strong> <?= $val->RequestedBy ?> </strong> </label><br>
+						<label> Purpose: <strong> <?= $val->Purpose ?> </strong> </label><br><br>
+						<form action="Purchase_details.php" method="POST">
+							<input type="hidden" value="<?= $val->MPVNo ?>" name="key">
+							<input type="hidden" value="Purchase_Voucher.php" name="link">
+							<input type="submit" name="View_details" value="View Details" class="btn btn-md btn-primary v_details">
+						</form>
+					</div>
+					<?php
 
 						}
 
 					} else {
 
 					?>
-
-					<tr>
-						<td colspan="6"> No data </td>
-					</tr>
-
+					<div class="form_info">
+						<h2> No For Approvals </h2>
+					</div>
 					<?php
 
 					}
 
 					?>
-				</table>
 			</section>
-		</div>
-		<div class="row">
-			<center class="col-lg-12">
-				<a href="../" class="btn btn-md btn-warning bk"> Back </a>
-			</center>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<a href="../" class="btn btn-md btn-warning bk"> Back </a>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>

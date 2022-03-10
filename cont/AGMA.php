@@ -11,20 +11,13 @@
 <head>
 	<title> AGMA Page </title>
 </head>
-<?= require_once 'header.php'; ?>
+<?php require_once 'header.php'; ?>
 	<div class="container-fluid">
 		<div class="row">
-			<section class="dtpanel">
+			<section class="main_frame">
 				<span class="well well-md">
 					<h4> AGMA Pre-Registration </h4>
 				</span>
-				<table border="0" class="table table-hover table-bordered dd">
-					<tr class="hh">
-						<td> DISTRICT SOURCE</td>
-						<td class="text-center"> REGISTERED </td>
-						<td class="text-center"> PARTICIPATION(%) </td>
-						<td class="text-center"> ACTION </td>
-					</tr>
 					<?php
 
 					require_once '../functions/db.php';
@@ -41,58 +34,39 @@
 						while ($val = sqlsrv_fetch_object($sel_data))
 						{
 
-							?>
-
-							<tr class="hh2">
-								<td> <?= $val->District ?> </td>
-								<td class="text-center" class="number_format"> <?= $val->NoOfRegistered ?> </td>
-								<td class="text-center" class="number_format"> <?= number_format(($val->NoOfRegistered / $val->GrandTotal) * 100,2) ?> % </td>
-								<td class="text-center">
-									<form action="AGMADetails.php" method="POST">
-										<input type="hidden" value="<?= $val->District ?>" name="key">
-										<input type="hidden" value="AGMA.php" name="link">
-										<input type="submit" name="View_details" value="View Details" class="btn btn-md btn-primary hh">
-									</form>
-								</td>
-							</tr>
-							<?php
-							$total = number_format($val->Total);
-							?>
-							<?php
-
-						}
-						?>
-						<tr tr class="hh3">
-							<td class="text-celter">TOTAL</td>
-							<td class="text-center"><?= $total ?></td>
-							<td class="text-center">100.00 %</td>
-							<td class="text-center"></td>
-						</tr>
-
-						<?php
-					}
-					else
-					{
-
-						?>
-
-						<tr>
-							<td colspan="5"> No data </td>
-						</tr>
-
-						<?php
-
-					}
-
 					?>
-				</table>
+					<div class="form_info_agma form_info">
+						<label> District Source: <strong> <?= $val->District ?> </strong></label><br>
+						<label> Registered: <strong> <?= number_format($val->NoOfRegistered) ?> </strong> </label><br>
+						<label> Participation (%): <strong> <?= number_format(($val->NoOfRegistered / $val->GrandTotal) * 100,2) ?> % </strong> </label><br>
+						<form action="AGMADetails.php" method="POST">
+							<input type="hidden" value="<?= $val->District ?>" name="key">
+							<input type="hidden" value="AGMA.php" name="link">
+							<input type="submit" name="View_details" value="View Details" class="btn btn-md btn-primary v_details">
+						</form>
+					</div>
+				<?php
+
+					}
+
+				} else {
+
+				?>
+				<div class="form_info text-center">
+					<h2> No For Approvals </h2>
+				</div>
+				<?php
+
+				}
+
+				?>
 			</section>
 		</div>
-		<div class="row">
-			<center class="col-lg-12">
-				<a href="../" class="btn btn-md btn-warning bk"> Back </a>
-			</center>
-		</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<a href="../" class="btn btn-md btn-warning bk"> Back </a>
+				</div>
+			</div><br>
 	</div>
 </body>
 </html>
