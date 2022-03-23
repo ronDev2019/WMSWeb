@@ -39,14 +39,14 @@
 	<head>
 		<title> MPV Details </title>
 	</head>
-	<?= require_once 'header.php'; ?>
+	<?php require_once 'header.php'; ?>
 	<body>
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
-			<section class="dtpanel">
+			<section class="main_frame">
 				<span class="well well-md">
 					<h4> Purchase Voucher Information </h4>
-				</span>
+				</span><br>
 				<fieldset>
 					<table border="0" class="h_det">
 						<tr>
@@ -87,7 +87,7 @@
 							</td>
 							<td>
 								<section>
-									<input type="text" class="depts" disabled value="<?= $data_values['Department'] ?>">
+									<input type="textarea" class="depts" disabled value="<?= $data_values['Department'] ?>">
 								</section>
 							</td>
 
