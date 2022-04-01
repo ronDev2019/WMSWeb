@@ -26,14 +26,14 @@
 <head>
 		<title> Pre-Registration Summary </title>
 	</head>
-	<?= require_once 'header.php'; ?>
+	<?php require_once 'header.php'; ?>
 	<body>
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
-			<section class="dtpanel">
+			<section class="main_frame">
 				<span class="well well-md">
 					<h4> AGMA Pre-Registration Summary </h4>
-				</span>
+				</span><hr>
 
 				<table border="1" class="table table-borderd table-hover d_body">
 					<thead>

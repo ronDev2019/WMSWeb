@@ -17,6 +17,12 @@
 	font-size: 9pt;
 }
 
+#show{
+	font-size:10pt;
+	position:absolute;
+	margin-left: 5px;
+}
+
 @media screen and (max-width: 1024px){
 
 	.form{

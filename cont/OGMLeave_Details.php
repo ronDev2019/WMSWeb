@@ -36,14 +36,14 @@
 <head>
 		<title> OGM's Leave Details </title>
 	</head>
-	<?= require_once 'header.php'; ?>
+	<?php require_once 'header.php'; ?>
 	<body>
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
-			<section class="dtpanel">
+			<section class="main_frame">
 				<span class="well well-md">
 					<h4> OGM's LEAVE INFORMATION </h4>
-				</span>
+				</span><hr>
 				<fieldset>
 					<table border="0" class="h_det">
 						<tr>
@@ -104,7 +104,7 @@
 						</tr>
 					</table>
 				</fieldset>
-
+				<hr>
 				<table border="1" class="table table-borderd table-hover d_body">
 					<thead>
 						<tr class="hh">

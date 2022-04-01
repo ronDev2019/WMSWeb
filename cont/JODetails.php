@@ -34,14 +34,14 @@
 <head>
 		<title> JO Details </title>
 	</head>
-	<?= require_once 'header.php'; ?>
+	<?php require_once 'header.php'; ?>
 	<body>
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
-			<section class="dtpanel">
+			<section class="main_frame">
 				<span class="well well-md">
 					<h4> JOB ORDER INFORMATION </h4>
-				</span>
+				</span><hr>
 				<fieldset>
 					<table border="0" class="h_det">
 						<tr>
@@ -152,19 +152,16 @@
 							
 							<td colspan="5">
 								<section>
-
-									<textarea rows="10" colspan="5">
+									<textarea id="joDetails" resize="false">
 										<?= $joDetails ?>
 									</textarea>
-
-									
 								</section>
 							</td>
 
 						</tr>
 					</table>
 				</fieldset>
-
+				<hr>
 				<form action="../functions/manipulate.php" method="POST">
 					<table class="foot" border="0">
 						

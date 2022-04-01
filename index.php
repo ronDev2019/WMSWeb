@@ -21,7 +21,10 @@ if (!isset($_SESSION['Active'])) {
 		<div class="form col-lg-4 col-lg-offset-4 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 			<p> WMS Login </p>
 			<input type="text" class="form-control" id="username" placeholder="Username"><br>
-			<input type="password" class="form-control" id="password" placeholder="Password"><br><br><br>
+			<input type="password" class="form-control" id="password" placeholder="Password">
+			<input type="checkbox" id="vPass">
+			<label id="show" for="ShowPass">Show Password</label>
+			<br><br>
 			<a href="forgotpassword.php"> Forgot Password </a>
 			<button type="submit" class="btn btn-sm btn-primary login"> Sign In </button>
 			<!--<input type="submit" class="btn btn-md btn-primary login" value="Login">-->
@@ -82,6 +85,15 @@ if (!isset($_SESSION['Active'])) {
 			}
 
 		});
+
+
+		$('#vPass').click(function(){
+			if(this.checked){
+				$('#password').attr('type','text')
+			} else {
+				$('#password').attr('type','password')
+			}
+		})
 	</script>
 
 <?php

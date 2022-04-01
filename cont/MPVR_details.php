@@ -46,7 +46,7 @@
 			<section class="main_frame">
 				<span class="well well-md">
 					<h4> Purchase Voucher Information </h4>
-				</span><br>
+				</span><hr>
 				<fieldset>
 					<table border="0" class="h_det">
 						<tr>
@@ -140,7 +140,7 @@
 						</tr>
 					</table>
 				</fieldset>
-
+				<hr>
 				<table border="1" class="table table-borderd table-hover d_body">
 					<thead>
 						<tr class="hh">
@@ -193,9 +193,9 @@
 			</section>
 		</div>
 		<div class="row">
-			<center class="col-lg-12">
+			<div class="col-md-12">
 				<a href="<?= $link ?>" class="btn btn-md btn-warning bk"> Back </a>
-			</center>
+			</div>
 		</div>
 	</div>
 	</body>
